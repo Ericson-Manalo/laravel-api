@@ -14,6 +14,10 @@ class ProjectController extends Controller
 
     $projects = Project::all();
 
-        return response()->json($projects);
+        return response()->json(
+        [
+            'success' => true,
+            'results' => $projects,
+        ]);
     }
 }
